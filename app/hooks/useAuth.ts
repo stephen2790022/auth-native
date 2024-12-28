@@ -38,11 +38,6 @@ export const useAuth = () => {
       })
       .catch(async (err) => {
         console.log(err);
-        // await AsyncStorage.removeItem("token");
-        // await AsyncStorage.removeItem("user");
-        // setCurrentUser(null);
-        // setToken(null);
-        // router.push(ROUTES.LOG_IN);
       });
   };
 

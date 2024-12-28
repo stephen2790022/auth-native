@@ -3,7 +3,7 @@ import { Control, Controller } from "react-hook-form";
 import { styles } from "../login.style";
 import { TextInput, Checkbox, Text, HelperText } from "react-native-paper";
 import { View } from "react-native";
-import { LoginFormData } from "@/app/logIn";
+import { LoginFormData } from "../login.view";
 
 type LoginFormProps = {
   control: Control<LoginFormData, any>;
@@ -58,20 +58,6 @@ export const LoginForm = ({ control }: LoginFormProps) => {
                 {error.message}
               </HelperText>
             )}
-          </View>
-        )}
-      />
-      <Controller
-        control={control}
-        name="rememberMe"
-        render={({ field: { onChange, value } }) => (
-          <View style={styles.checkboxContainer}>
-            <Checkbox.Android
-              status={value ? "checked" : "unchecked"}
-              onPress={() => onChange(!value)}
-              color="#000000"
-            />
-            <Text>Remember me</Text>
           </View>
         )}
       />

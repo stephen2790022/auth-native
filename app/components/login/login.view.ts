@@ -13,10 +13,9 @@ const loginSchema = z.object({
   rememberMe: z.boolean().default(false),
 });
 
-type LoginFormData = {
+export type LoginFormData = {
   email: string;
   password: string;
-  rememberMe: boolean;
 };
 
 // Custom hook for the login form
@@ -25,7 +24,6 @@ export const useLoginView = () => {
   const defaultValues: LoginFormData = {
     email: "",
     password: "",
-    rememberMe: false,
   };
 
   const { control, handleSubmit } = useForm<LoginFormData>({
