@@ -1,11 +1,5 @@
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
-import {
-  TextInput,
-  Button,
-  Checkbox,
-  Text,
-  HelperText,
-} from "react-native-paper";
+import { Button, Text } from "react-native-paper";
 import { ImageBackground, View } from "react-native";
 import { styles } from "./login.style";
 import { useLoginView } from "./login.view";
@@ -16,8 +10,8 @@ type LogInProps = {
   logInAction: (params: LoginValue) => void;
 };
 
-export const LogIn = ({ logInAction }: LogInProps) => {
-  const { control, handleSubmit, handleRedirect } = useLoginView();
+export default function LogIn({ logInAction }: LogInProps) {
+  const { control, handleSubmit, handleSignUpRedirect } = useLoginView();
 
   return (
     <ImageBackground style={styles.containerBackGround} source={{ uri: "" }}>
@@ -31,7 +25,7 @@ export const LogIn = ({ logInAction }: LogInProps) => {
           <View style={styles.buttonContainer}>
             <Button
               mode="outlined"
-              onPress={handleRedirect}
+              onPress={handleSignUpRedirect}
               style={[styles.signUpButton, styles.buttonCommonStyle]}
               labelStyle={styles.signUpText}
             >
@@ -50,4 +44,4 @@ export const LogIn = ({ logInAction }: LogInProps) => {
       </SafeAreaProvider>
     </ImageBackground>
   );
-};
+}

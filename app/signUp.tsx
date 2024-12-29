@@ -1,7 +1,7 @@
-import { Text } from "react-native";
+import SignUpContainer from "./container/sign-up/sign-up.container";
 
-const LoggedIn = () => {
-  return <Text>LoggedIn</Text>;
+const SignUpScreen = () => {
+  return <SignUpContainer />;
 };
 
-export default LoggedIn;
+export default SignUpScreen;

@@ -12,7 +12,7 @@ export type UserLogIn = {
   user: LoginValue;
 };
 
-type UserVal = {
+export type UserSignUpVal = {
   email: string;
   password: string;
   password_confirmation: string;
@@ -25,8 +25,30 @@ type UserVal = {
   phone_number: string;
 };
 
+export type UserInfos = {
+  email: string;
+  first_name: string;
+  last_name: string;
+  user_name: string;
+  date_of_birth: string;
+  gender: string;
+  nationality: string;
+  phone_number: string;
+};
+
+type StatusType = {
+  code: number;
+  message: string;
+};
+
+export type AuthResponseType = {
+  status: StatusType;
+  user: UserInfos;
+  token: string;
+};
+
 type UserSignUp = {
-  user: UserVal;
+  user: UserSignUpVal;
 };
 
 export const authApi = createApi({

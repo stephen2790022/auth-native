@@ -22,10 +22,10 @@ export const LoginForm = ({ control }: LoginFormProps) => {
               placeholder="Email"
               value={value}
               onChangeText={onChange}
-              mode="outlined"
+              mode="flat"
               style={styles.input}
-              outlineColor="#E0E0E0"
-              activeOutlineColor="#000000"
+              underlineColor="#E0E0E0"
+              activeUnderlineColor="#000000"
               error={!!error}
             />
             {error && (
@@ -47,10 +47,10 @@ export const LoginForm = ({ control }: LoginFormProps) => {
               value={value}
               onChangeText={onChange}
               secureTextEntry
-              mode="outlined"
+              mode="flat"
               style={styles.input}
-              outlineColor="#E0E0E0"
-              activeOutlineColor="#000000"
+              underlineColor="#E0E0E0"
+              activeUnderlineColor="#000000"
               error={!!error}
             />
             {error && (

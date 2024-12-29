@@ -31,7 +31,7 @@ export const useLoginView = () => {
     defaultValues,
   });
 
-  const handleRedirect = () => router.push(ROUTES.SIGN_UP);
+  const handleSignUpRedirect = () => router.push(ROUTES.SIGN_UP);
 
-  return { control, handleSubmit, handleRedirect };
+  return { control, handleSubmit, handleSignUpRedirect };
 };
